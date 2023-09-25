@@ -1,0 +1,64 @@
+room with dark piano music for the background and he have to solve the **p_a_z_z_l_e** or maybe when the smilie caught him he'll spawn in that room ?? maybe 
+
+yeah i'll take it  :)
+
+
+
+
+
+
+
+// typewriter ui
+
+using UnityEngine;
+using System.Collections;
+using UnityEngine.UI;
+
+// attach to UI Text component (with the full text already there)
+
+public class UITextTypeWriter.cs : MonoBehaviour 
+{
+
+	Text txt;
+	string story;
+
+	void Awake () 
+	{
+		txt = GetComponent<Text> ();
+		story = txt.text;
+		txt.text = "";
+
+		// TODO: add optional delay when to start
+		StartCoroutine ("PlayText");
+	}
+
+	IEnumerator PlayText()
+	{
+		foreach (char c in story) 
+		{
+			txt.text += c;
+			yield return new WaitForSeconds (0.125f);
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+triggerd == high voice 
+
+
+
+
+
+
